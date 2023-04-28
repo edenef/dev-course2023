@@ -21,6 +21,7 @@ def get_currency_check(currency):
 @application.route('/check/bitcoin', methods=['GET'])
 def get_bitcoin():
     res = requests.get('https://api.coindesk.com/v1/bpi/currentprice.json');
+    print(res.taxt)
     return Response(json.dumps(res.taxt), mimetype='application/json', status=200)
 
 currency_rate = {
